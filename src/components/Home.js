@@ -313,7 +313,7 @@ export default function Home(props) {
                 </div>
                 <div className="col-md-6 align-self-center">
                     <h1>Hello</h1>
-                    <h2>You must <Link to={"/login"}>log in</Link> or <Link to={"/register"}>sign in</Link> to access this site.</h2>
+                    <h2>You must <Link to={"/login"}>log in</Link> or <Link to={"/register"}>sign up</Link> to access this site.</h2>
                     {/*<p>*/}
                     {/*    Try with different restaurant or search in the whole country.*/}
                     {/*</p>*/}

@@ -53,6 +53,7 @@ export default function Restaurant(props) {
         const area = false;
         dispatch(setRestaurantId({restaurant_id}));
         dispatch(setRecommendedArea({area}));
+        handleClose();
         history.push("/restaurant/recommendation");
     }
 
@@ -61,6 +62,7 @@ export default function Restaurant(props) {
         const area = true;
         dispatch(setRestaurantId({restaurant_id}));
         dispatch(setRecommendedArea({area}));
+        handleClose();
         history.push("/restaurant/recommendation");
     }
 

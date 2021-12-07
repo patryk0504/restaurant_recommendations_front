@@ -156,7 +156,7 @@ export default function RecommendationByRestaurant() {
         return () => {
             unmounted = true;
         }
-    }, []);
+    }, [restaurant_id]);
     return (
         <Row md={1}>
             {console.log(recommendedFound)}
