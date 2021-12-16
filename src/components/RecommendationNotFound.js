@@ -310,11 +310,9 @@ export default function RecommendationNotFound(props) {
                     </svg>
                 </div>
                 <div className="col-md-6 align-self-center">
-                    <h1>ERROR</h1>
-                    <h2>There are no recommendations in this city.</h2>
-                    <p>
-                        Try with different restaurant or search in the whole country.
-                    </p>
+                    <h1>Error</h1>
+                    <h2>{props.header ? props.header : "There are no similar restaurants in this city."}</h2>
+                    <p>{props.details ? props.details : "Try with different restaurant or search in the whole country."}</p>
                 </div>
             </div>
         </div>

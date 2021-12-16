@@ -12,8 +12,6 @@ export default function TopNavbar(props) {
                 <Navbar.Toggle aria-controls='responsive-navbar-nav'/>
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className="me-auto">
-                        {/*<Navbar.Brand as={Link} to={"/restaurants"}>Polish Restaurants</Navbar.Brand>*/}
-                        {/*<Nav.Link as={Link} to={"/home"}>Home</Nav.Link>*/}
                         {props.currentUser ? (
                             <>
                                 <Navbar.Brand as={Link} to={"/restaurants"}>Polish Restaurants</Navbar.Brand>

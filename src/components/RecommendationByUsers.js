@@ -151,7 +151,7 @@ export default function RecommendationByUsers() {
                 data={recommendedByUser}
                 loading={loading}
                 columns={columns}
-            /> : <RecommendationNotFound/>}
+            /> : <RecommendationNotFound header={"There are no recommendations for you right now."} details={"Try to rate something first."}/>}
 
         </Row>
     )
