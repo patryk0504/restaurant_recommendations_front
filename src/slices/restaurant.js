@@ -19,7 +19,7 @@ export const getRestaurants = createAsyncThunk(
                 error.message ||
                 error.toString();
             thunkAPI.dispatch(setMessage(message));
-            if (error.response && (error.response.status === 401 || error.response.status === 422)) {
+            if (error.response && (error.response.status === 401 || error.response.status === 422 || error.response.status === 500)) {
                 EventBus.dispatch("logout");
             }
             return thunkAPI.rejectWithValue();
@@ -41,7 +41,7 @@ export const getRestaurantRecommendationInCity = createAsyncThunk(
                 error.message ||
                 error.toString();
             thunkAPI.dispatch(setMessage(message));
-            if (error.response && (error.response.status === 401 || error.response.status === 422)) {
+            if (error.response && (error.response.status === 401 || error.response.status === 422 || error.response.status === 500)) {
                 EventBus.dispatch("logout");
             }
             return thunkAPI.rejectWithValue();
@@ -64,7 +64,7 @@ export const getRestaurantRecommendationAllCountry = createAsyncThunk(
                 error.message ||
                 error.toString();
             thunkAPI.dispatch(setMessage(message));
-            if (error.response && (error.response.status === 401 || error.response.status === 422)) {
+            if (error.response && (error.response.status === 401 || error.response.status === 422 || error.response.status === 500)) {
                 EventBus.dispatch("logout");
             }
             return thunkAPI.rejectWithValue();
@@ -86,7 +86,7 @@ export const getRestaurantRecommendationByUsers = createAsyncThunk(
                 error.message ||
                 error.toString();
             thunkAPI.dispatch(setMessage(message));
-            if (error.response && (error.response.status === 401 || error.response.status === 422)) {
+            if (error.response && (error.response.status === 401 || error.response.status === 422 || error.response.status === 500)) {
                 EventBus.dispatch("logout");
             }
             return thunkAPI.rejectWithValue();

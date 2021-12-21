@@ -17,7 +17,7 @@ export const getRates = createAsyncThunk(
                 error.message ||
                 error.toString();
             thunkAPI.dispatch(setMessage(message));
-            if (error.response && (error.response.status === 401 || error.response.status === 422)) {
+            if (error.response && (error.response.status === 401 || error.response.status === 422 || error.response.status === 500)) {
                 EventBus.dispatch("logout");
             }
             return thunkAPI.rejectWithValue();
@@ -40,7 +40,7 @@ export const setRate = createAsyncThunk(
                 error.message ||
                 error.toString();
             thunkAPI.dispatch(setMessage(message));
-            if (error.response && (error.response.status === 401 || error.response.status === 422)) {
+            if (error.response && (error.response.status === 401 || error.response.status === 422 || error.response.status === 500)) {
                 EventBus.dispatch("logout");
             }
             return thunkAPI.rejectWithValue();
@@ -62,7 +62,7 @@ export const getSimilarUsers = createAsyncThunk(
                 error.message ||
                 error.toString();
             thunkAPI.dispatch(setMessage(message));
-            if (error.response && (error.response.status === 401 || error.response.status === 422)) {
+            if (error.response && (error.response.status === 401 || error.response.status === 422 || error.response.status === 500)) {
                 EventBus.dispatch("logout");
             }
             return thunkAPI.rejectWithValue();
