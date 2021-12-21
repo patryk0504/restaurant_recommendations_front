@@ -40,7 +40,7 @@ function App() {
                 <TopNavbar currentUser={currentUser} logOut={logOut}/>
                 <div className="container mt-5">
                     {/*<AuthVerify logOut={logOut}/>*/}
-                    {currentUser && <Redirect to='/login'/>}
+                    {!currentUser && <Redirect to='/login'/>}
                     <Switch>
                         <Route exact path={["/", "/home"]} component={Home}/>
                         <Route exact path="/login" component={Login}/>
